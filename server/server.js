@@ -23,17 +23,12 @@ app.get("/cakes", function (request, response) {
 });
 
 //here need to add the SQL query from supabase
-app.get("/cakes", function (request, response) {
-const result = await db.query('
-  SELECT 
-  ...app
-  ');
-  response.json(result);
-});
-
-
-
-
-
+//app.get("/cakes", function (request, response) {
+//const result = await db.query('
+//  SELECT
+// ...app
+// ');
+// response.json(result);
+//});
 
 app.listen(8080, () => console.log("App is running on port 8080"));
