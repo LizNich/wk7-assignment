@@ -18,17 +18,22 @@ app.get("/", function (request, response) {
 });
 
 // Link to db
-app.get("/cakes", function (request, response) {
-  response.json("Here be cakes!");
-});
-
-//here need to add the SQL query from supabase
 //app.get("/cakes", function (request, response) {
-//const result = await db.query('
-//  SELECT
-// ...app
-// ');
-// response.json(result);
+//  response.json("Cakes!");
 //});
+
+app.get("/cakes", async function (request, response) {
+  const result = await db.query(`
+    SELECT 
+      types.type_name,
+      members.username,
+      cakes.description
+    FROM cakes
+    JOIN members ON cakes.member_id = members.member_id
+    JOIN types ON cakes.type_id = types.type_id
+  `);
+  const cakes = result.rows;
+  response.json(cakes);
+});
 
 app.listen(8080, () => console.log("App is running on port 8080"));
