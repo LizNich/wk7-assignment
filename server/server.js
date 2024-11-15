@@ -27,7 +27,8 @@ app.get("/cakes", async function (request, response) {
     SELECT 
       types.type_name,
       members.username,
-      cakes.description
+      cakes.description,
+      cakes.image
     FROM cakes
     JOIN members ON cakes.member_id = members.member_id
     JOIN types ON cakes.type_id = types.type_id

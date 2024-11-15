@@ -1,28 +1,80 @@
 * {
   box-sizing: border-box;
-  font-family: monospace;
+  font-family: calibri;
 }
 :root {
-  --primary-color: #dec2a1;
-  --secondary-color: #95b491;
-  --accent-color: #861625;
-  --highlight-color: #182416;
-  --glow-spread-color: white;
-  --tree-cookie-color: #6eb663;
+  --primary-color: #c9426b;
+  --secondary-color: #ffb0b9;
+  --accent-color: #a87a64;
+  --highlight-color: #ffddc8;
+  --block-color: #3c140f;
 }
 body {
-  font-weight: bold;
-  position: absolute;
   height: 100vh;
-  color: var(--primary-color);
-  background-image: url(assets/Xmas.png);
+  /*margin-left: 5%;*/
+  /*color: var(--primary-color);*/
+  background-image: url(assets/background_2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
+
 h1 {
-  font-size: 2vw;
-  color: var(--primary-color);
-  margin-left: 10%;
+  font-size: 5vw;
+  color: var(--block-color);
+  /*margin-left: 10%;*/
+  text-align: center;
+  font-style: oblique;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 2em;
+  color: var(--block-color);
+}
+
+h2 {
+  color: grey;
+}
+
+h4 {
+  font-style: oblique;
+  text-emphasis: circle var(--accent-color);
+}
+
+.cake-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.cake-item {
+  background-color: var(--highlight-color);
+  padding: 5px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 2px 5px var(--block-color);
+  line-height: 1em;
+}
+
+header,
+footer {
+  color: white;
+  width: 100%;
+  z-index: 1000;
+  height: 6vh;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  font-size: 0.75em;
+  margin-top: 10px;
 }
