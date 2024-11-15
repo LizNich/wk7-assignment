@@ -43,6 +43,7 @@ h2 {
 h4 {
   font-style: oblique;
   text-emphasis: circle var(--accent-color);
+  background-color: var(--highlight-color);
 }
 
 .cake-container {
