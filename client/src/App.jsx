@@ -19,38 +19,19 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <body>
-        <nav>
-          <Link to="/">Home</Link> | <Link to="/form">Form Page</Link>
-        </nav>
+      <main>
+        <div className="link-container">
+          <nav>
+            <Link to="/">Go to Home</Link> |
+            <Link to="/form">Join in! Post your bakes here</Link>
+          </nav>
+        </div>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/form" element={<FormPage />} />
         </Routes>
-        <div>
-          <h1>Bake My Day!</h1>
-          <h4>
-            lorem ipsomfdsafdfsafdsfndksaaf f fdslsk jfklsa fjdsal jfdsksla
-            afjkdsla fjskl fdska fskl fjkdsl fjkdssa fjkdsla fjkdsla ajkflsda
-            jfksdla fjsla fjkdsla fjdskl fdsjkla fdsjkla fjsdkalf djskalf
-            dsjaklf dsjkalf dsjkalf dsjkal fjdkslajfkldsa fdjkslaf jdkls fslkdjf
-            l
-          </h4>
-          <div className="cake-container">
-            {cakes.map((cake) => (
-              <div key={cake.id} className="cake-item">
-                <h3>{cake.username}</h3>
-                <h2>{cake.image}</h2>
-                <h4>{cake.type_name}</h4>
-                <p>
-                  <em>{cake.description}</em>
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
         <footer>Copyright 2024</footer>
-      </body>
+      </main>
     </BrowserRouter>
   );
 }
